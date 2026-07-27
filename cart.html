@@ -1,22 +1,129 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sepet</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARK NOVA | Sepet</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+    padding:40px;
+}
+
+h1{
+    color:#2dff6c;
+    text-align:center;
+}
+
+.cart-box{
+    max-width:700px;
+    margin:40px auto;
+    background:#1f1f1f;
+    padding:30px;
+    border-radius:15px;
+}
+
+.item{
+    background:#2c2c2c;
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.total{
+    font-size:25px;
+    color:#2dff6c;
+    margin-top:20px;
+}
+
+button{
+    margin-top:20px;
+    background:#2dff6c;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#26d85d;
+}
+</style>
+
 </head>
+
 <body>
 
-    <h1>🛒 Sepetim</h1>
+<h1>🛒 Sepetim</h1>
 
-    <div id="cart-items">
-        <p>Sepetiniz şu anda boş.</p>
-    </div>
 
-    <h2>Toplam: <span id="total">0₺</span></h2>
+<div class="cart-box">
 
-    <button id="checkoutBtn">Ödemeye Geç</button>
+<div id="cart-items">
+</div>
+
+<div class="total">
+Toplam: <span id="total">0₺</span>
+</div>
+
+<button onclick="sepetTemizle()">🗑 Sepeti Temizle</button>
+
+<button>💳 Ödemeye Geç</button>
+
+</div>
+
+
+<script>
+
+let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+
+let liste = document.getElementById("cart-items");
+let toplam = 0;
+
+
+if(sepet.length === 0){
+
+liste.innerHTML="<p>Sepetiniz şu anda boş.</p>";
+
+}
+
+else{
+
+sepet.forEach(urun=>{
+
+liste.innerHTML += `
+<div class="item">
+<span>${urun.isim}</span>
+<span>${urun.fiyat}₺</span>
+</div>
+`;
+
+toplam += urun.fiyat;
+
+});
+
+}
+
+
+document.getElementById("total").innerHTML = toplam + "₺";
+
+
+function sepetTemizle(){
+
+localStorage.removeItem("sepet");
+
+location.reload();
+
+}
+
+</script>
+
 
 </body>
 </html>

@@ -80,6 +80,19 @@ font-weight:bold;
 button:hover{
 background:#26d85d;
 }
+
+/* Bildirim */
+#bildirim{
+display:none;
+position:fixed;
+top:30px;
+right:30px;
+background:#2dff6c;
+color:#111;
+padding:15px 25px;
+border-radius:10px;
+font-weight:bold;
+}
 </style>
 
 </head>
@@ -88,28 +101,33 @@ background:#26d85d;
 
 <header>📦 ARK NOVA Packler</header>
 
+
 <div class="container">
+
 
 <div class="card">
 <h2>🔥 Magmasaurus Pack</h2>
 <p>2× Magmasaurus</p>
 <div class="price">275 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('Magmasaurus Pack')">Satın Al</button>
 </div>
+
 
 <div class="card">
 <h2>🦖 R-Giga Pack</h2>
 <p>2× R-Giga</p>
 <div class="price">325 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('R-Giga Pack')">Satın Al</button>
 </div>
+
 
 <div class="card">
 <h2>🦷 Carcharo Pack</h2>
 <p>2× Carcharodontosaurus</p>
 <div class="price">300 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('Carcharo Pack')">Satın Al</button>
 </div>
+
 
 <div class="card">
 <h2>🛡️ Tank Kiti</h2>
@@ -118,10 +136,37 @@ background:#26d85d;
 <p>2× Paraceratherium</p>
 <p>2× Trike</p>
 <div class="price">250 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('Tank Kiti')">Satın Al</button>
 </div>
 
+
 </div>
+
+
+<div id="bildirim"></div>
+
+
+<script>
+
+function sepeteEkle(urun){
+
+let bildirim=document.getElementById("bildirim");
+
+bildirim.innerHTML="✅ "+urun+" sepete eklendi!";
+
+bildirim.style.display="block";
+
+
+setTimeout(function(){
+
+bildirim.style.display="none";
+
+},2000);
+
+}
+
+</script>
+
 
 </body>
 </html>

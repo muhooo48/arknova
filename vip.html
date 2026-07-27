@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARK NOVA | VIP</title>
+
+<title>ARK NOVA | VIP Mağazası</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Arial',sans-serif;
 }
 
 body{
@@ -19,78 +23,14 @@ color:white;
 }
 
 header{
-background:#1c1c1c;
-padding:20px;
+background:#1b1b1b;
+padding:25px;
 text-align:center;
-font-size:32px;
+font-size:36px;
 font-weight:bold;
 color:#2dff6c;
+box-shadow:0 5px 20px rgba(0,255,100,.2);
 }
-
-.container{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-padding:60px;
-}
-
-.card{
-width:300px;
-background:#1f1f1f;
-border-radius:15px;
-padding:30px;
-text-align:center;
-transition:.3s;
-border:2px solid transparent;
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#2dff6c;
-box-shadow:0 0 25px #2dff6c;
-}
-
-h2{
-margin-bottom:15px;
-}
-
-.price{
-font-size:35px;
-color:#2dff6c;
-margin:20px 0;
-font-weight:bold;
-}
-
-button{
-background:#2dff6c;
-border:none;
-padding:15px 35px;
-font-size:18px;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
-}
-
-button:hover{
-background:#26d85d;
-}
-
-/* Sepete eklendi bildirimi */
-#bildirim{
-display:none;
-position:fixed;
-top:30px;
-right:30px;
-background:#2dff6c;
-color:#111;
-padding:15px 25px;
-border-radius:10px;
-font-weight:bold;
-}
-<head>
-
-<style>
 
 .menu-btn{
 position:fixed;
@@ -102,10 +42,94 @@ text-decoration:none;
 padding:12px 20px;
 border-radius:10px;
 font-weight:bold;
+transition:.3s;
 }
 
 .menu-btn:hover{
 background:#26d85d;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:60px auto;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+width:330px;
+background:#1c1c1c;
+border-radius:18px;
+padding:30px;
+border:2px solid transparent;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#2dff6c;
+box-shadow:0 0 25px rgba(45,255,108,.45);
+}
+
+.card h2{
+text-align:center;
+color:#2dff6c;
+margin-bottom:20px;
+font-size:32px;
+}
+
+.card ul{
+padding-left:20px;
+line-height:2;
+}
+
+.price{
+margin:25px 0;
+text-align:center;
+font-size:38px;
+font-weight:bold;
+color:#2dff6c;
+}
+
+button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:#2dff6c;
+color:black;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#26d85d;
+}
+
+#bildirim{
+display:none;
+position:fixed;
+top:25px;
+left:50%;
+transform:translateX(-50%);
+background:#2dff6c;
+color:black;
+padding:15px 30px;
+border-radius:10px;
+font-weight:bold;
+}
+
+footer{
+margin-top:60px;
+background:#161616;
+padding:20px;
+text-align:center;
+color:#888;
 }
 
 </style>
@@ -116,39 +140,84 @@ background:#26d85d;
 
 <a href="index.html" class="menu-btn">🏠 Menü</a>
 
-
-<header>👑 ARK NOVA VIP Mağazası</header>
+<header>
+👑 ARK NOVA VIP Mağazası
+</header>
 
 <div class="container">
 
 <div class="card">
-<h2>VIP</h2>
-<p>Sunucuda başlangıç avantajları.</p>
-<div class="price">150 TL</div>
-<button onclick="sepeteEkle('VIP',150)">Satın Al</button>
+
+<h2>👑 VIP</h2>
+
+<ul>
+<li>💎 15 dakikada <b>15 Point</b></li>
+<li>🎖️ VIP sohbet etiketi</li>
+<li>🎒 VIP kitlerine erişim</li>
+<li>⚡ Temel VIP avantajları</li>
+</ul>
+
+<div class="price">
+150 TL
 </div>
 
+<button onclick="sepeteEkle('VIP',150)">
+🛒 Satın Al
+</button>
+
+</div>
 
 <div class="card">
-<h2>VIP DoDo</h2>
-<p>Daha güçlü avantajlar ve özel içerikler.</p>
-<div class="price">250 TL</div>
-<button onclick="sepeteEkle('VIP DoDo',250)">Satın Al</button>
+
+<h2>🦤 VIP DODO</h2>
+
+<ul>
+<li>💎 15 dakikada <b>25 Point</b></li>
+<li>🎖️ DODO sohbet etiketi</li>
+<li>🎒 DODO kitlerine erişim</li>
+<li>⭐ VIP avantajlarının tamamı</li>
+</ul>
+
+<div class="price">
+250 TL
 </div>
 
+<button onclick="sepeteEkle('VIP DODO',250)">
+🛒 Satın Al
+</button>
+
+</div>
 
 <div class="card">
-<h2>VIP Boss</h2>
-<p>En yüksek seviye VIP paketi.</p>
-<div class="price">400 TL</div>
-<button onclick="sepeteEkle('VIP Boss',400)">Satın Al</button>
+
+<h2>👑⚔️ VIP BOSS</h2>
+
+<ul>
+<li>💎 15 dakikada <b>35 Point</b></li>
+<li>🎖️ BOSS sohbet etiketi</li>
+<li>🎒 Tüm VIP kitleri</li>
+<li>🔥 En güçlü VIP paketi</li>
+</ul>
+
+<div class="price">
+400 TL
 </div>
+
+<button onclick="sepeteEkle('VIP BOSS',400)">
+🛒 Satın Al
+</button>
 
 </div>
 
+</div>
 
 <div id="bildirim"></div>
 
+  <footer>
+
+© 2026 ARK NOVA • Tüm Hakları Saklıdır.
+
+</footer>
 
 <script>
 
@@ -169,7 +238,9 @@ bildirim.innerHTML="✅ "+urun+" sepete eklendi!";
 bildirim.style.display="block";
 
 setTimeout(function(){
+
 bildirim.style.display="none";
+
 },2000);
 
 }

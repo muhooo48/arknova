@@ -1,92 +1,144 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARK NOVA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<title>ARK NOVA</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins',sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-        body{
-            background:#111;
-            color:white;
-        }
+<style>
 
-        nav{
-            background:#1b1b1b;
-            padding:18px 40px;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        .logo{
-            font-size:30px;
-            color:#2dff6c;
-            font-weight:bold;
-        }
+body{
+background:#111;
+color:white;
+}
 
-        ul{
-            display:flex;
-            list-style:none;
-            gap:18px;
-        }
+nav{
+background:#1b1b1b;
+padding:18px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
 
-        ul li a{
-            color:white;
-            text-decoration:none;
-            background:#2c2c2c;
-            padding:12px 20px;
-            border-radius:10px;
-            transition:.3s;
-        }
+.logo{
+font-size:30px;
+color:#2dff6c;
+font-weight:bold;
+}
 
-        ul li a:hover{
-            background:#2dff6c;
-            color:black;
-        }
+ul{
+display:flex;
+list-style:none;
+gap:18px;
+}
 
-        .hero{
-            height:80vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction:column;
-            text-align:center;
-            background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-            url("https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1600") center/cover;
-        }
+ul li{
+display:inline;
+}
 
-        h1{
-            font-size:70px;
-            color:#2dff6c;
-        }
+ul li a{
+color:white;
+text-decoration:none;
+background:#2c2c2c;
+padding:12px 20px;
+border-radius:10px;
+transition:.3s;
+}
 
-        p{
-            font-size:22px;
-            margin-top:15px;
-        }
+ul li a:hover{
+background:#2dff6c;
+color:black;
+}
 
-        .btn{
-            margin-top:30px;
-            background:#2dff6c;
-            color:black;
-            text-decoration:none;
-            padding:16px 35px;
-            border-radius:12px;
-            font-weight:bold;
-        }
-    </style>
+.hero{
+height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1600") center/cover;
+}
+
+.hero h1{
+font-size:70px;
+color:#2dff6c;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
+}
+
+.btn{
+margin-top:30px;
+background:#2dff6c;
+color:black;
+text-decoration:none;
+padding:16px 35px;
+border-radius:12px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#26d85d;
+}
+
+.discord{
+background:#1b1b1b;
+text-align:center;
+padding:70px 20px;
+}
+
+.discord h2{
+font-size:42px;
+color:#2dff6c;
+margin-bottom:15px;
+}
+
+.discord p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.discord-btn{
+display:inline-block;
+background:#5865F2;
+color:white;
+text-decoration:none;
+padding:16px 35px;
+border-radius:12px;
+font-size:20px;
+font-weight:bold;
+transition:.3s;
+}
+
+.discord-btn:hover{
+transform:scale(1.05);
+}
+
+footer{
+background:#161616;
+text-align:center;
+padding:20px;
+color:#888;
+}
+
+</style>
 
 </head>
+
 <body>
 
 <nav>
@@ -94,13 +146,13 @@
 <div class="logo">ARK NOVA</div>
 
 <ul>
-<li><a href="#">🏠 Anasayfa</a></li>
+<li><a href="index.html">🏠 Anasayfa</a></li>
 <li><a href="vip.html">👑 VIP</a></li>
 <li><a href="packler.html">📦 Packler</a></li>
-<li><a href="point.html">💎 Point Satın Al</a></li>
+<li><a href="point.html">💎 Point</a></li>
+<li><a href="sepet.html">🛒 Sepet</a></li>
 <li><a href="destek.html">🎫 Destek</a></li>
 <li><a href="kurallar.html">📜 Kurallar</a></li>
-<li><a href="cart.html">🛒 Sepet</a></li>
 </ul>
 
 </nav>
@@ -111,9 +163,30 @@
 
 <p>Türkiye'nin En Kaliteli ARK Sunucusu</p>
 
-<a class="btn" href="#">Mağazaya Git</a>
+<a class="btn" href="vip.html">🛒 Mağazaya Git</a>
 
 </section>
+
+<section class="discord">
+
+<h2>💬 Discord Sunucumuza Katıl</h2>
+
+<p>
+Destek almak, etkinliklerden haberdar olmak ve topluluğumuzla sohbet etmek için
+Discord sunucumuza katıl.
+</p>
+
+<a class="discord-btn" href="https://discord.gg/VStBB2Pqj" target="_blank">
+🚀 Discord'a Katıl
+</a>
+
+</section>
+
+<footer>
+
+© 2026 ARK NOVA • Tüm Hakları Saklıdır.
+
+</footer>
 
 </body>
 </html>

@@ -80,6 +80,20 @@ font-weight:bold;
 button:hover{
 background:#26d85d;
 }
+
+/* Sepete eklendi bildirimi */
+#bildirim{
+display:none;
+position:fixed;
+top:30px;
+right:30px;
+background:#2dff6c;
+color:#111;
+padding:15px 25px;
+border-radius:10px;
+font-weight:bold;
+}
+
 </style>
 
 </head>
@@ -88,37 +102,69 @@ background:#26d85d;
 
 <header>💎 ARK NOVA Point Mağazası</header>
 
+
 <div class="container">
+
 
 <div class="card">
 <h2>💎 10.000 Point</h2>
 <p>Sunucuda kullanabileceğin 10.000 Point.</p>
 <div class="price">150 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('10.000 Point')">Satın Al</button>
 </div>
+
 
 <div class="card">
 <h2>💎 25.000 Point</h2>
 <p>Sunucuda kullanabileceğin 25.000 Point.</p>
 <div class="price">300 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('25.000 Point')">Satın Al</button>
 </div>
+
 
 <div class="card">
 <h2>💎 50.000 Point</h2>
 <p>Sunucuda kullanabileceğin 50.000 Point.</p>
 <div class="price">550 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('50.000 Point')">Satın Al</button>
 </div>
+
 
 <div class="card">
 <h2>💎 100.000 Point</h2>
 <p>Sunucuda kullanabileceğin 100.000 Point.</p>
 <div class="price">900 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('100.000 Point')">Satın Al</button>
 </div>
 
+
 </div>
+
+
+<div id="bildirim"></div>
+
+
+<script>
+
+function sepeteEkle(urun){
+
+let bildirim=document.getElementById("bildirim");
+
+bildirim.innerHTML="✅ "+urun+" sepete eklendi!";
+
+bildirim.style.display="block";
+
+
+setTimeout(function(){
+
+bildirim.style.display="none";
+
+},2000);
+
+}
+
+</script>
+
 
 </body>
 </html>

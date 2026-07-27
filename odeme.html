@@ -19,90 +19,147 @@ font-family:Arial,sans-serif;
 body{
 background:#111;
 color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+}
+
+.menu-btn{
+position:fixed;
+top:20px;
+right:20px;
+background:#2dff6c;
+color:black;
+text-decoration:none;
+padding:12px 20px;
+border-radius:10px;
+font-weight:bold;
+}
+
+.menu-btn:hover{
+background:#26d85d;
+}
+
+header{
+background:#1c1c1c;
+padding:20px;
+text-align:center;
+font-size:32px;
+font-weight:bold;
+color:#2dff6c;
 }
 
 .box{
-
+max-width:700px;
+margin:50px auto;
 background:#1f1f1f;
-padding:40px;
+padding:35px;
 border-radius:15px;
-text-align:center;
-width:400px;
-border:2px solid #2dff6c;
-
 }
 
-h1{
+h2{
 color:#2dff6c;
 margin-bottom:20px;
 }
 
-p{
-font-size:18px;
-margin:15px 0;
+label{
+display:block;
+margin-top:20px;
+margin-bottom:8px;
+font-weight:bold;
 }
 
+input{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.toplam{
+margin-top:30px;
+font-size:24px;
+font-weight:bold;
+color:#2dff6c;
+}
 
 button{
-
+margin-top:30px;
+width:100%;
+padding:16px;
 background:#2dff6c;
 border:none;
-padding:15px 30px;
 border-radius:10px;
 font-size:18px;
 font-weight:bold;
 cursor:pointer;
-
 }
 
 button:hover{
-
 background:#26d85d;
-
 }
 
 </style>
 
 </head>
 
-
 <body>
 
+<a href="index.html" class="menu-btn">🏠 Menü</a>
+
+<header>
+💳 ARK NOVA Ödeme
+</header>
 
 <div class="box">
 
-<h1>💳 Ödeme</h1>
+<h2>🛒 Sipariş Özeti</h2>
 
-<p>Sepetiniz kontrol ediliyor...</p>
+<p id="urunler">Sepetiniz yükleniyor...</p>
 
-<p>
-Ödeme işlemini tamamlamak için destek ekibiyle iletişime geçebilirsiniz.
-</p>
+<div class="toplam">
+Toplam: <span id="toplam">0 TL</span>
+</div>
 
+<label>🎮 Oyun İçi Kullanıcı Adı</label>
+<input type="text" placeholder="Kullanıcı adınızı girin">
 
-<button onclick="geriDon()">
-🛒 Sepete Dön
+<label>💬 Discord Kullanıcı Adı</label>
+<input type="text" placeholder="Örn: Kullanici#1234">
+
+<label>📧 E-Posta (İsteğe Bağlı)</label>
+<input type="email" placeholder="ornek@mail.com">
+
+<button onclick="alert('Ödeme sistemi yakında aktif olacak.')">
+💳 Ödemeye Devam Et
 </button>
-
 
 </div>
 
-
-
 <script>
 
-function geriDon(){
+let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
 
-window.location.href="cart.html";
+let liste = "";
+let toplam = 0;
+
+for(let i=0;i<sepet.length;i++){
+
+liste += "• " + sepet[i].isim + " - " + sepet[i].fiyat + " TL<br>";
+
+toplam += sepet[i].fiyat;
 
 }
 
-</script>
+if(sepet.length==0){
 
+liste="Sepetiniz boş.";
+
+}
+
+document.getElementById("urunler").innerHTML=liste;
+
+document.getElementById("toplam").innerHTML=toplam+" TL";
+
+</script>
 
 </body>
 </html>

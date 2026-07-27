@@ -75,9 +75,23 @@ font-weight:bold;
 button:hover{
 background:#26d85d;
 }
+
+/* Sepete eklendi bildirimi */
+#bildirim{
+display:none;
+position:fixed;
+top:30px;
+right:30px;
+background:#2dff6c;
+color:#111;
+padding:15px 25px;
+border-radius:10px;
+font-weight:bold;
+}
 </style>
 
 </head>
+
 <body>
 
 <header>👑 ARK NOVA VIP Mağazası</header>
@@ -88,24 +102,52 @@ background:#26d85d;
 <h2>VIP</h2>
 <p>Sunucuda başlangıç avantajları.</p>
 <div class="price">150 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('VIP')">Satın Al</button>
 </div>
+
 
 <div class="card">
 <h2>VIP DoDo</h2>
 <p>Daha güçlü avantajlar ve özel içerikler.</p>
 <div class="price">250 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('VIP DoDo')">Satın Al</button>
 </div>
+
 
 <div class="card">
 <h2>VIP Boss</h2>
 <p>En yüksek seviye VIP paketi.</p>
 <div class="price">400 TL</div>
-<button>Satın Al</button>
+<button onclick="sepeteEkle('VIP Boss')">Satın Al</button>
 </div>
 
 </div>
+
+
+<div id="bildirim"></div>
+
+
+<script>
+
+function sepeteEkle(urun){
+
+let bildirim = document.getElementById("bildirim");
+
+bildirim.innerHTML = "✅ " + urun + " sepete eklendi!";
+
+bildirim.style.display="block";
+
+
+setTimeout(function(){
+
+bildirim.style.display="none";
+
+},2000);
+
+}
+
+</script>
+
 
 </body>
 </html>

@@ -1,27 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARK NOVA | Point Mağazası</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+background:#1c1c1c;
+padding:20px;
+text-align:center;
+font-size:32px;
+font-weight:bold;
+color:#2dff6c;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+padding:60px;
+}
+
+.card{
+width:300px;
+background:#1f1f1f;
+border-radius:15px;
+padding:30px;
+text-align:center;
+transition:.3s;
+border:2px solid transparent;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#2dff6c;
+box-shadow:0 0 25px #2dff6c;
+}
+
+.card h2{
+margin-bottom:15px;
+color:#2dff6c;
+}
+
+.card p{
+margin:10px 0;
+}
+
+.price{
+font-size:35px;
+font-weight:bold;
+color:#2dff6c;
+margin:20px 0;
+}
+
+button{
+background:#2dff6c;
+border:none;
+padding:15px 35px;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#26d85d;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>💎 ARK NOVA Point Mağazası</header>
+
 <div class="container">
 
 <div class="card">
 <h2>💎 10.000 Point</h2>
+<p>Sunucuda kullanabileceğin 10.000 Point.</p>
 <div class="price">150 TL</div>
 <button>Satın Al</button>
 </div>
 
 <div class="card">
 <h2>💎 25.000 Point</h2>
+<p>Sunucuda kullanabileceğin 25.000 Point.</p>
 <div class="price">300 TL</div>
 <button>Satın Al</button>
 </div>
 
 <div class="card">
 <h2>💎 50.000 Point</h2>
+<p>Sunucuda kullanabileceğin 50.000 Point.</p>
 <div class="price">550 TL</div>
 <button>Satın Al</button>
 </div>
 
 <div class="card">
 <h2>💎 100.000 Point</h2>
+<p>Sunucuda kullanabileceğin 100.000 Point.</p>
 <div class="price">900 TL</div>
 <button>Satın Al</button>
 </div>
 
 </div>
+
+</body>
+</html>

@@ -10,76 +10,57 @@ body {
     color: white;
 }
 
+
 header {
-    width: 100%;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 70px;
     background: #111;
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
 }
 
-.logo {
-    width: 120px;
-}
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-right: 35px;
     font-size: 18px;
-}
-
-nav a:hover {
-    color: #00ff88;
 }
 
 
 .hero {
-    height: 500px;
+    height: 470px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    background: linear-gradient(#0008,#0008), url("logo.png");
-    background-size: cover;
-    background-position: center;
 }
 
-.content h1 {
+
+.hero h1 {
     font-size: 60px;
     margin-bottom: 20px;
 }
 
-.content p {
-    font-size: 20px;
-    margin: 10px;
+
+.hero p {
+    font-size: 22px;
+    margin: 15px;
 }
 
 
-.btn {
+.hero a {
     display: inline-block;
-    margin-top: 30px;
-    padding: 15px 35px;
+    margin-top: 25px;
     background: #5865F2;
     color: white;
-    text-decoration: none;
+    padding: 15px 35px;
     border-radius: 10px;
+    text-decoration: none;
 }
 
 
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px;
-}
-
-
-.card {
-    background: #111;
-    padding: 30px;
-    width: 300px;
-    border-radius: 15px;
-    text-align: center;
+section h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
 }

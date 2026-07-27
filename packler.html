@@ -109,7 +109,7 @@ font-weight:bold;
 <h2>🔥 Magmasaurus Pack</h2>
 <p>2× Magmasaurus</p>
 <div class="price">275 TL</div>
-<button onclick="sepeteEkle('Magmasaurus Pack')">Satın Al</button>
+<button onclick="sepeteEkle('Magmasaurus Pack',275)">Satın Al</button>
 </div>
 
 
@@ -117,7 +117,7 @@ font-weight:bold;
 <h2>🦖 R-Giga Pack</h2>
 <p>2× R-Giga</p>
 <div class="price">325 TL</div>
-<button onclick="sepeteEkle('R-Giga Pack')">Satın Al</button>
+<button onclick="sepeteEkle('R-Giga Pack',325)">Satın Al</button>
 </div>
 
 
@@ -125,7 +125,7 @@ font-weight:bold;
 <h2>🦷 Carcharo Pack</h2>
 <p>2× Carcharodontosaurus</p>
 <div class="price">300 TL</div>
-<button onclick="sepeteEkle('Carcharo Pack')">Satın Al</button>
+<button onclick="sepeteEkle('Carcharo Pack',300)">Satın Al</button>
 </div>
 
 
@@ -136,7 +136,7 @@ font-weight:bold;
 <p>2× Paraceratherium</p>
 <p>2× Trike</p>
 <div class="price">250 TL</div>
-<button onclick="sepeteEkle('Tank Kiti')">Satın Al</button>
+<button onclick="sepeteEkle('Tank Kiti',250)">Satın Al</button>
 </div>
 
 
@@ -148,7 +148,17 @@ font-weight:bold;
 
 <script>
 
-function sepeteEkle(urun){
+function sepeteEkle(urun,fiyat){
+
+let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+
+sepet.push({
+isim: urun,
+fiyat: fiyat
+});
+
+localStorage.setItem("sepet", JSON.stringify(sepet));
+
 
 let bildirim=document.getElementById("bildirim");
 
@@ -165,8 +175,3 @@ bildirim.style.display="none";
 
 }
 
-</script>
-
-
-</body>
-</html>

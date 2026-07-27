@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ARK NOVA | Packler</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -18,6 +22,24 @@ background:#111;
 color:white;
 }
 
+
+.menu-btn{
+position:fixed;
+top:20px;
+right:20px;
+background:#2dff6c;
+color:black;
+text-decoration:none;
+padding:12px 20px;
+border-radius:10px;
+font-weight:bold;
+}
+
+.menu-btn:hover{
+background:#26d85d;
+}
+
+
 header{
 background:#1c1c1c;
 padding:20px;
@@ -27,23 +49,26 @@ font-weight:bold;
 color:#2dff6c;
 }
 
+
 .container{
 display:flex;
 justify-content:center;
-gap:40px;
+gap:20px;
 flex-wrap:wrap;
-padding:60px;
+padding:40px;
 }
+
 
 .card{
 width:300px;
 background:#1f1f1f;
 border-radius:15px;
-padding:30px;
+padding:25px;
 text-align:center;
 transition:.3s;
 border:2px solid transparent;
 }
+
 
 .card:hover{
 transform:translateY(-10px);
@@ -51,21 +76,25 @@ border-color:#2dff6c;
 box-shadow:0 0 25px #2dff6c;
 }
 
+
 .card h2{
 margin-bottom:15px;
 color:#2dff6c;
 }
 
+
 .card p{
-margin:10px 0;
+margin:8px 0;
 }
+
 
 .price{
 font-size:35px;
 font-weight:bold;
 color:#2dff6c;
-margin:20px 0;
+margin:15px 0;
 }
+
 
 button{
 background:#2dff6c;
@@ -77,73 +106,115 @@ cursor:pointer;
 font-weight:bold;
 }
 
+
 button:hover{
 background:#26d85d;
 }
 
-/* Bildirim */
+
 #bildirim{
 display:none;
 position:fixed;
-top:30px;
-right:30px;
+top:80px;
+right:20px;
 background:#2dff6c;
-color:#111;
-padding:15px 25px;
+color:black;
+padding:15px;
 border-radius:10px;
 font-weight:bold;
 }
+
 </style>
 
 </head>
 
+
 <body>
 
-<header>📦 ARK NOVA Packler</header>
+
+<a href="index.html" class="menu-btn">🏠 Menü</a>
+
+
+<header>
+📦 ARK NOVA Packler
+</header>
 
 
 <div class="container">
 
 
 <div class="card">
+
 <h2>🔥 Magmasaurus Pack</h2>
+
 <p>2× Magmasaurus</p>
+
 <div class="price">275 TL</div>
-<button onclick="sepeteEkle('Magmasaurus Pack',275)">Satın Al</button>
+
+<button onclick="sepeteEkle('Magmasaurus Pack',275)">
+Satın Al
+</button>
+
 </div>
 
 
+
 <div class="card">
+
 <h2>🦖 R-Giga Pack</h2>
+
 <p>2× R-Giga</p>
+
 <div class="price">325 TL</div>
-<button onclick="sepeteEkle('R-Giga Pack',325)">Satın Al</button>
+
+<button onclick="sepeteEkle('R-Giga Pack',325)">
+Satın Al
+</button>
+
 </div>
 
 
+
 <div class="card">
+
 <h2>🦷 Carcharo Pack</h2>
+
 <p>2× Carcharodontosaurus</p>
+
 <div class="price">300 TL</div>
-<button onclick="sepeteEkle('Carcharo Pack',300)">Satın Al</button>
+
+<button onclick="sepeteEkle('Carcharo Pack',300)">
+Satın Al
+</button>
+
 </div>
 
 
+
 <div class="card">
+
 <h2>🛡️ Tank Kiti</h2>
+
 <p>2× Stego</p>
 <p>2× Carbonemys</p>
-<p>2× Paraceratherium</p>
+<p>2× Paracer</p>
 <p>2× Trike</p>
+
 <div class="price">250 TL</div>
-<button onclick="sepeteEkle('Tank Kiti',250)">Satın Al</button>
+
+<button onclick="sepeteEkle('Tank Kiti',250)">
+Satın Al
+</button>
+
 </div>
 
 
 </div>
+
 
 
 <div id="bildirim"></div>
+
 
 
 <script>
@@ -153,23 +224,23 @@ function sepeteEkle(urun,fiyat){
 let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
 
 sepet.push({
-isim: urun,
-fiyat: fiyat
+isim:urun,
+fiyat:fiyat
 });
 
-localStorage.setItem("sepet", JSON.stringify(sepet));
+localStorage.setItem("sepet",JSON.stringify(sepet));
 
 
-let bildirim = document.getElementById("bildirim");
+let bildirim=document.getElementById("bildirim");
 
-bildirim.innerHTML = "✅ " + urun + " sepete eklendi!";
+bildirim.innerHTML="✅ "+urun+" sepete eklendi!";
 
-bildirim.style.display = "block";
+bildirim.style.display="block";
 
 
 setTimeout(function(){
 
-bildirim.style.display = "none";
+bildirim.style.display="none";
 
 },2000);
 

@@ -129,25 +129,24 @@ font-weight:bold;
 
 <script>
 
-function sepeteEkle(urun){
+function sepeteEkle(urun,fiyat){
 
-let bildirim = document.getElementById("bildirim");
+let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
 
-bildirim.innerHTML = "✅ " + urun + " sepete eklendi!";
+sepet.push({
+isim: urun,
+fiyat: fiyat
+});
 
+localStorage.setItem("sepet", JSON.stringify(sepet));
+
+let bildirim=document.getElementById("bildirim");
+
+bildirim.innerHTML="✅ "+urun+" sepete eklendi!";
 bildirim.style.display="block";
 
-
 setTimeout(function(){
-
 bildirim.style.display="none";
-
 },2000);
 
 }
-
-</script>
-
-
-</body>
-</html>
